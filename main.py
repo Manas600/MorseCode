@@ -8,27 +8,35 @@ translate_dict = {
 
 }
 
-message = input("Enter the message you want to Translate - ")
-morse_message = " ".join(translate_dict[c] for c in message.upper())
+# message = input("Enter the message you want to Translate - ")
+# morse_message = " ".join(translate_dict[c] for c in message.upper())
 
-print(morse_message)
+# print(morse_message)
 
 
-def play_morse(text_message):
+# def play_morse(text_message):
 
-    for x in text_message:
-        if x == '.':
-            playsound("short_beep.mp3")
-            time.sleep(0.3)
-        elif x == '-':
-            playsound("long.mp3")
-            time.sleep(0.3)
-        elif x == '/' or " ":
+#     for x in text_message:
+#         if x == '.':
+#             playsound("short_beep.mp3")
+#             time.sleep(0.3)
+#         elif x == '-':
+#             playsound("long.mp3")
+#             time.sleep(0.3)
+#         elif x == '/' or " ":
             
-            time.sleep(0.6)
+#             time.sleep(0.6)
 
 
-play_morse(morse_message)
+# play_morse(morse_message)
+
+
+reverse_dict = {v:k for k,v in translate_dict.items()}
+reverse_message = input("Enter message in morse code - ")
+text_reverse_message = "".join(reverse_dict[c] for c in reverse_message.split(" "))
+print(text_reverse_message)
+
+
 
 
 
